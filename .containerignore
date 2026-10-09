@@ -1,0 +1,6 @@
+.git
+.cache
+build
+test-output
+**/__pycache__
+**/*.pyc

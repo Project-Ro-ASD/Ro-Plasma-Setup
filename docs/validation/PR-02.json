@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "static": {
+    "status": "passed",
+    "order_fixture": [
+      {
+        "id": "org.kde.plasmasetup.language",
+        "weight": 0
+      },
+      {
+        "id": "org.ro.plasmasetup.development",
+        "weight": 1
+      },
+      {
+        "id": "org.kde.plasmasetup.keyboard",
+        "weight": 5
+      },
+      {
+        "id": "org.kde.plasmasetup.prepare",
+        "weight": 10
+      },
+      {
+        "id": "org.kde.plasmasetup.account",
+        "weight": 20
+      },
+      {
+        "id": "org.kde.plasmasetup.hostname",
+        "weight": 30
+      },
+      {
+        "id": "org.kde.plasmasetup.time",
+        "weight": 40
+      },
+      {
+        "id": "org.kde.plasmasetup.wifi",
+        "weight": 50
+      },
+      {
+        "id": "org.ro.plasmasetup.future-overview-fixture",
+        "weight": 190
+      },
+      {
+        "id": "org.kde.plasmasetup.finished",
+        "weight": 200
+      }
+    ],
+    "nevra": "plasma-setup-6.7.5-1.fc44.x86_64",
+    "package_structure_plugin": "/usr/lib64/qt6/plugins/kf6/packagestructure/plasmasetup.so",
+    "qml_components": "static plugin embedded in upstream executable",
+    "pages": [
+      {
+        "id": "org.kde.plasmasetup.language",
+        "weight": 0
+      },
+      {
+        "id": "org.kde.plasmasetup.keyboard",
+        "weight": 5
+      },
+      {
+        "id": "org.kde.plasmasetup.prepare",
+        "weight": 10
+      },
+      {
+        "id": "org.kde.plasmasetup.account",
+        "weight": 20
+      },
+      {
+        "id": "org.kde.plasmasetup.hostname",
+        "weight": 30
+      },
+      {
+        "id": "org.kde.plasmasetup.time",
+        "weight": 40
+      },
+      {
+        "id": "org.kde.plasmasetup.wifi",
+        "weight": 50
+      },
+      {
+        "id": "org.kde.plasmasetup.finished",
+        "weight": 200
+      }
+    ],
+    "verified_binary_and_srpm_digests": true,
+    "verified_archive_patches_and_critical_sources": true
+  },
+  "load": {
+    "status": "passed",
+    "scope": "Fedora KPackage loader + unmodified SRPM SetupModule linked into independent runner",
+    "scenarios": [
+      {
+        "weight": 1,
+        "persistent_state_unchanged": true,
+        "removal_verified": true,
+        "instances": [
+          {
+            "available": true,
+            "contentItem_required_and_writable": true,
+            "nextEnabled_binding": true,
+            "notify_signals": true
+          },
+          {
+            "available": true,
+            "contentItem_required_and_writable": true,
+            "nextEnabled_binding": true,
+            "notify_signals": true
+          }
+        ],
+        "instantiations": 2,
+        "pages": [
+          {
+            "id": "org.ro.plasmasetup.development",
+            "weight": 1
+          },
+          {
+            "id": "org.kde.plasmasetup.account",
+            "weight": 20
+          },
+          {
+            "id": "org.kde.plasmasetup.finished",
+            "weight": 200
+          },
+          {
+            "id": "org.kde.plasmasetup.hostname",
+            "weight": 30
+          },
+          {
+            "id": "org.kde.plasmasetup.keyboard",
+            "weight": 5
+          },
+          {
+            "id": "org.kde.plasmasetup.language",
+            "weight": 0
+          },
+          {
+            "id": "org.kde.plasmasetup.prepare",
+            "weight": 10
+          },
+          {
+            "id": "org.kde.plasmasetup.time",
+            "weight": 40
+          },
+          {
+            "id": "org.kde.plasmasetup.wifi",
+            "weight": 50
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "weight": 190,
+        "persistent_state_unchanged": true,
+        "removal_verified": true,
+        "instances": [
+          {
+            "available": true,
+            "contentItem_required_and_writable": true,
+            "nextEnabled_binding": true,
+            "notify_signals": true
+          },
+          {
+            "available": true,
+            "contentItem_required_and_writable": true,
+            "nextEnabled_binding": true,
+            "notify_signals": true
+          }
+        ],
+        "instantiations": 2,
+        "pages": [
+          {
+            "id": "org.ro.plasmasetup.development",
+            "weight": 190
+          },
+          {
+            "id": "org.kde.plasmasetup.account",
+            "weight": 20
+          },
+          {
+            "id": "org.kde.plasmasetup.finished",
+            "weight": 200
+          },
+          {
+            "id": "org.kde.plasmasetup.hostname",
+            "weight": 30
+          },
+          {
+            "id": "org.kde.plasmasetup.keyboard",
+            "weight": 5
+          },
+          {
+            "id": "org.kde.plasmasetup.language",
+            "weight": 0
+          },
+          {
+            "id": "org.kde.plasmasetup.prepare",
+            "weight": 10
+          },
+          {
+            "id": "org.kde.plasmasetup.time",
+            "weight": 40
+          },
+          {
+            "id": "org.kde.plasmasetup.wifi",
+            "weight": 50
+          }
+        ],
+        "status": "passed"
+      }
+    ]
+  },
+  "graphical": {
+    "status": "unverified",
+    "reason": "No available disposable VM; /dev/kvm absent and virsh reports missing virtqemud"
+  },
+  "firstboot": {
+    "status": "unverified",
+    "reason": "PR-02 never executes upstream wizard or lifecycle"
+  },
+  "environment": [
+    "qt6-qtbase-6.11.2-3.fc44.x86_64",
+    "qt6-qtdeclarative-6.11.2-2.fc44.x86_64",
+    "kf6-kpackage-6.30.0-1.fc44.x86_64",
+    "extra-cmake-modules-6.30.0-1.fc44.noarch"
+  ],
+  "date": "2026-10-09",
+  "base_main_commit": "02456b84674f2e882b5a241f57cff49c75c5f3ff",
+  "policy_tests": {
+    "status": "passed",
+    "count": 14
+  },
+  "build": {
+    "status": "passed",
+    "container_image_id": "06a3be81fb40de041575c6715d7c499fbe55dff21cd76b0c2558be8a035a81d8",
+    "base_image_digest": "sha256:07584325a68e0308215aff1de506d8da6452d2e465c25729829a01393446f204",
+    "additional_packages": [
+      "kf6-kcoreaddons-devel-6.30.0-1.fc44.x86_64",
+      "gcc-c++-16.2.1-2.fc44.x86_64",
+      "cmake-4.3.0-1.fc44.x86_64",
+      "plasma-desktop-6.7.5-1.fc44.x86_64",
+      "plasma-workspace-6.7.5-1.fc44.x86_64"
+    ]
+  }
+}

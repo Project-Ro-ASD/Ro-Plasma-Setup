@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "pr01_commit": "89a8d2b42539830f4de81bcef9871656d97d0069",
+    "baseline_path": "docs/research/baseline-2026-10-09.json",
+    "baseline_sha256": "91f3d4f30446e13e870a5eceb07a677ede6fb5577cd64aa8fd0a0d52dbabbeb3",
+    "note": "Minimal executable subset of PR-01 evidence; additional component and loader/metadata hashes from the same verified archive and binary RPM."
+  },
+  "nevra": "plasma-setup-6.7.5-1.fc44.x86_64",
+  "fedora_release": "44",
+  "artifacts": [
+    {
+      "kind": "source",
+      "filename": "plasma-setup-6.7.5-1.fc44.src.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.7.5/1.fc44/src/plasma-setup-6.7.5-1.fc44.src.rpm",
+      "sha256": "d60561f145e835b851ba071a7fe5f5718d6766103717116d5cf2af7e7bca2ff2"
+    },
+    {
+      "kind": "binary",
+      "filename": "plasma-setup-6.7.5-1.fc44.x86_64.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.7.5/1.fc44/x86_64/plasma-setup-6.7.5-1.fc44.x86_64.rpm",
+      "sha256": "70384f7c964c26a68daece7cf178c3d02e64cb59e76c4523cfbfa34dae690057"
+    }
+  ],
+  "srpm_contents": [
+    {
+      "path": "plasma-setup-6.7.5.tar.xz",
+      "sha256": "64bc032ef9e8a6549fc2dd8b5fa64118e25da652e3de8adb1c974efbd33258dd"
+    },
+    {
+      "path": "plasma-setup-6.7.5.tar.xz.sig",
+      "sha256": "f5a1e816f3e6ab494e0fced49152f9e8f0e6847799467bac60a6b8a03ee44e9b"
+    },
+    {
+      "path": "plasma-setup-load-default-wallpaper.patch",
+      "sha256": "d8062c5f94a140c51fc381e7cf8a955ab5c9203d688de9c96e2d7dfbf20d83ad"
+    },
+    {
+      "path": "plasma-setup-select-fedora-lookandfeel.patch",
+      "sha256": "62a13a7b44f695b62e8334a67eb7aaf160b57d042c40a75730286aee67c74ab0"
+    },
+    {
+      "path": "plasma-setup.spec",
+      "sha256": "30135d25346f1c63aea1a00cb6945beebba9640276872ebc9013cb16828829ef"
+    }
+  ],
+  "source_files": {
+    "src/pagesmodel.cpp": "58063a0e0410234463f726db9fa1a31cf7fb85159b68d07ae3ede2b35ae8eaa7",
+    "src/packagestructure/plasmasetuppackage.cpp": "eb10f6b8e7a5dd00a50300440474b559d3d9055d727e91f8c2ca173c95ecc3b9",
+    "src/qml/Wizard.qml": "fdae3aaddc2188dea8f5f85ab81b4b21ca47b84cd809af97e6485ad5b0d8e683",
+    "src/components/CMakeLists.txt": "a7dafe4c978bedec391fa371c994610df506ac0f5284f9a4aec4b5ce6337b507",
+    "src/components/setupmodule.cpp": "632a3b2f7af8cca421838e07100f18f1fdd423e59e76234b9f641b8a13a6ae2b",
+    "src/components/setupmodule.h": "73d48b779edbaa6346922f990f381b3563a40e9312df21a6129dce58a207b995",
+    "src/components/qml/Debouncer.qml": "3e36e7b338d46a722f427e67180f5aaefe667b66bd11bc74f83a3e11f50f90e4"
+  },
+  "installed_modules": [
+    {
+      "id": "org.kde.plasmasetup.language",
+      "weight": 0,
+      "main_qml_sha256": "7e4d696db568b6db2002cda234f2506927581880af98f3bdcf8e859b6cce985f",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.keyboard",
+      "weight": 5,
+      "main_qml_sha256": "fc15d84fd9ff24a1cb8c63ebbd0110b63968d5807e2c7188d84efbea875ac969",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.prepare",
+      "weight": 10,
+      "main_qml_sha256": "5695aa19c08a4a950a5858bc15baf8de9e5ef06b5e48adab9ce19553d21ced6e",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.account",
+      "weight": 20,
+      "main_qml_sha256": "2b69fe44f13310f34d6ac439f5a7822a23af3114d16ad03f47f1bb8cf6f92ec3",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.hostname",
+      "weight": 30,
+      "main_qml_sha256": "c61a279578f8cce76f69717599624030dc930093dd81e1a7396dee59f2e27b56",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.time",
+      "weight": 40,
+      "main_qml_sha256": "8f66b87c06b5ae659ac1682ac6b56a1e3c881d2ce0d5a9d313a18722fc07dab4",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.wifi",
+      "weight": 50,
+      "main_qml_sha256": "d470eca7d81a381f6450ce1b320ea0fcd104986fae4b4befe7b7a744aab50f4d",
+      "matches_patched_source": true
+    },
+    {
+      "id": "org.kde.plasmasetup.finished",
+      "weight": 200,
+      "main_qml_sha256": "385b7a8229454b1b63a474e0cdb5c72525452956b49f2ba82a9a8a61239d0890",
+      "matches_patched_source": true
+    }
+  ],
+  "runtime_files": {
+    "usr/lib64/qt6/plugins/kf6/packagestructure/plasmasetup.so": "f91f4cc05cea8e824fd772d3b6249a7aaed9b3eaeb7912d926e5bd663e2a10a6",
+    "usr/lib64/qt6/qml/org/kde/plasmasetup/components/qmldir": "6b1e7ede3b2d90cf43acc13bf091fff58f1e1ea6474707f68ec0e44766dc313d",
+    "usr/lib64/qt6/qml/org/kde/plasmasetup/components/componentsplugin.qmltypes": "84cd83fc1d69b9e6fb691f5c9c4e53d4557623120e6d4cce3b0e4ce018594cd1",
+    "usr/share/plasma/packages/org.kde.plasmasetup.language/metadata.json": "43ed694acf5a38e6257b7684e87145cd0f7fe5bdd1fd0153c14de4d9ec9cdb0d",
+    "usr/share/plasma/packages/org.kde.plasmasetup.keyboard/metadata.json": "ba792eea0eb9dcb0919945e510a861c8c1c97c3c3115fdc8542664f40bf05aef",
+    "usr/share/plasma/packages/org.kde.plasmasetup.prepare/metadata.json": "e429621b9e07e14ebe002169ac85ca2e6c076f3951ee026d28511de0437cd4c3",
+    "usr/share/plasma/packages/org.kde.plasmasetup.account/metadata.json": "97bb689c9a14d323e7ec3bff1c30c69fa9fc84c0c451b03d72ccde2e6d492ddd",
+    "usr/share/plasma/packages/org.kde.plasmasetup.hostname/metadata.json": "efe6aa2b919eb3e5e7abb5e0210f1dd623f20cb54430ea871d239c7b76b210fa",
+    "usr/share/plasma/packages/org.kde.plasmasetup.time/metadata.json": "23fd1bd8b3f461942eb7dcb1c1f9b0732cbe11aef741a30f155e050719abc0f2",
+    "usr/share/plasma/packages/org.kde.plasmasetup.wifi/metadata.json": "90d36d9bfd5c7455905a9a693a459ca655e6c0fa470e3d3f9f6101cf7bad1aeb",
+    "usr/share/plasma/packages/org.kde.plasmasetup.finished/metadata.json": "7fcbc52132eb2ba75ace08cd5b1124dc8b67f9ed3eeb1d57a4f5e68ca000ad84"
+  }
+}

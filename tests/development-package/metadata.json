@@ -1,0 +1,12 @@
+{
+    "KPackageStructure": "KDE/PlasmaSetup",
+    "KPlugin": {
+        "Id": "org.ro.plasmasetup.development",
+        "Name": "Ro development contract probe",
+        "Description": "Development-only in-memory KPackage probe; never ship in an image",
+        "License": "CC0-1.0",
+        "Authors": [{ "Name": "Project Ro-ASD" }]
+    },
+    "X-KDE-ParentApp": "org.kde.plasmasetup",
+    "X-KDE-Weight": 1
+}
