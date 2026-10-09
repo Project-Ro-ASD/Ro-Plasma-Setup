@@ -1,0 +1,20 @@
+FROM registry.fedoraproject.org/fedora:44@sha256:07584325a68e0308215aff1de506d8da6452d2e465c25729829a01393446f204
+RUN dnf -y --setopt=install_weak_deps=False install python3 rpm cpio cmake ninja-build gcc-c++ \
+    extra-cmake-modules kf6-kpackage-devel qt6-qtdeclarative-devel && dnf clean all
+COPY tools /src/tools
+COPY tests /src/tests
+COPY docs/research/baseline-2026-10-09.json /src/docs/research/baseline-2026-10-09.json
+RUN python3 -m unittest discover -s /src/tests -v
+RUN python3 /src/tools/harness.py prepare --cache /opt/baseline
+# Exact verified RPM, not the newest package in the Fedora repositories. Disable
+# scriptlets: no setup service, sysusers, tmpfiles or completion trigger runs.
+RUN dnf -y --setopt=install_weak_deps=False --setopt=tsflags=noscripts install /opt/baseline/plasma-setup-6.7.5-1.fc44.x86_64.rpm && dnf clean all
+# Fedora's KPackage development RPM does not pull this CMake/header dependency
+# when weak dependencies are disabled.
+RUN dnf -y --setopt=install_weak_deps=False install kf6-kcoreaddons-devel && dnf clean all
+RUN python3 /src/tools/harness.py installed && \
+    cmake -S /src/tests/runtime -B /opt/probe-build -G Ninja \
+    -DPLASMA_SETUP_SOURCE=/opt/baseline/source/plasma-setup-6.7.5 && \
+    cmake --build /opt/probe-build --parallel 2
+USER 65534:65534
+ENTRYPOINT ["python3", "/src/tools/harness.py", "run", "--cache", "/opt/baseline", "--runner", "/opt/probe-build/ro-plasma-probe"]
