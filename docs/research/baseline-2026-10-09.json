@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "purpose": "PR-01 static architecture evidence; not runtime compatibility certification",
+  "inspected_date": "2026-10-09",
+  "timezone": "Europe/Istanbul",
+  "target": {
+    "distribution": "Fedora",
+    "release": 44,
+    "plasma_series": "6.7.x",
+    "package": "plasma-setup",
+    "version": "6.7.5",
+    "release_string": "1.fc44",
+    "binary_arch": "x86_64"
+  },
+  "artifacts": [
+    {
+      "kind": "source",
+      "filename": "plasma-setup-6.7.5-1.fc44.src.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.7.5/1.fc44/src/plasma-setup-6.7.5-1.fc44.src.rpm",
+      "sha256": "d60561f145e835b851ba071a7fe5f5718d6766103717116d5cf2af7e7bca2ff2"
+    },
+    {
+      "kind": "binary",
+      "filename": "plasma-setup-6.7.5-1.fc44.x86_64.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.7.5/1.fc44/x86_64/plasma-setup-6.7.5-1.fc44.x86_64.rpm",
+      "sha256": "70384f7c964c26a68daece7cf178c3d02e64cb59e76c4523cfbfa34dae690057"
+    }
+  ],
+  "srpm_contents": [
+    {
+      "path": "plasma-setup-6.7.5.tar.xz",
+      "sha256": "64bc032ef9e8a6549fc2dd8b5fa64118e25da652e3de8adb1c974efbd33258dd"
+    },
+    {
+      "path": "plasma-setup-6.7.5.tar.xz.sig",
+      "sha256": "f5a1e816f3e6ab494e0fced49152f9e8f0e6847799467bac60a6b8a03ee44e9b"
+    },
+    {
+      "path": "plasma-setup-load-default-wallpaper.patch",
+      "sha256": "d8062c5f94a140c51fc381e7cf8a955ab5c9203d688de9c96e2d7dfbf20d83ad"
+    },
+    {
+      "path": "plasma-setup-select-fedora-lookandfeel.patch",
+      "sha256": "62a13a7b44f695b62e8334a67eb7aaf160b57d042c40a75730286aee67c74ab0"
+    },
+    {
+      "path": "plasma-setup.spec",
+      "sha256": "30135d25346f1c63aea1a00cb6945beebba9640276872ebc9013cb16828829ef"
+    }
+  ],
+  "upstream": {
+    "repository": "https://invent.kde.org/plasma/plasma-setup",
+    "mirror": "https://github.com/KDE/plasma-setup",
+    "ref": "v6.7.5",
+    "commit": "6089b09b2c4f9b95f58da5c7f2a2d65faf9ba7bd",
+    "critical_files_match_release_archive": true,
+    "files": [
+      {
+        "path": "docs/CUSTOM_MODULES.md",
+        "git_blob_sha1": "13a67b155e4ba7c62aa1e6d4be349ac20cb366ee",
+        "sha256": "a5c16ae83666a852cb49464815bc5f42c35fc188ce0fead3bbe9d76d3b5c12e0"
+      },
+      {
+        "path": "files/plasmasetuprc",
+        "git_blob_sha1": "796ca3a558244b139eaa8e13a46040cb7cec88a6",
+        "sha256": "49c389930c0f802252738b5080fd00d7bdefb01e509195af710b079d360e84ac"
+      },
+      {
+        "path": "files/plasma-setup.service.in",
+        "git_blob_sha1": "46ee819ff2e86ef3b7e217c9a1306b109323c2de",
+        "sha256": "eca1b52e73437131e22f49926f555672f30b91beaf72aa7848f07ab96a5916e3"
+      },
+      {
+        "path": "files/plasma-setup-tmpfiles.conf.in",
+        "git_blob_sha1": "8ea1989a7193969d791dad6397d1bf354bca017d",
+        "sha256": "46d076446fe7490f987e73c3cbdefd5617aeb4ffa28517925e00f94eec52275b"
+      },
+      {
+        "path": "src/pagesmodel.cpp",
+        "git_blob_sha1": "59e8ed3e2a3a6e3f30ac7c9ca97b28f5045b9c7b",
+        "sha256": "58063a0e0410234463f726db9fa1a31cf7fb85159b68d07ae3ede2b35ae8eaa7"
+      },
+      {
+        "path": "src/components/setupmodule.h",
+        "git_blob_sha1": "95adf9ec4a6f672ea615d5d274c27b026d051dfc",
+        "sha256": "73d48b779edbaa6346922f990f381b3563a40e9312df21a6129dce58a207b995"
+      },
+      {
+        "path": "src/packagestructure/plasmasetuppackage.cpp",
+        "git_blob_sha1": "65ea3d27c5f78cc31c36303bfb52f0e6725d81b1",
+        "sha256": "eb10f6b8e7a5dd00a50300440474b559d3d9055d727e91f8c2ca173c95ecc3b9"
+      },
+      {
+        "path": "src/qml/Wizard.qml",
+        "git_blob_sha1": "79fb025be6618c4395cd809ac2aea82fea2bc3e6",
+        "sha256": "fdae3aaddc2188dea8f5f85ab81b4b21ca47b84cd809af97e6485ad5b0d8e683"
+      },
+      {
+        "path": "src/qml/LandingComponent.qml",
+        "git_blob_sha1": "fec30abf1a157f9856212df82ac0d538ea09e16c",
+        "sha256": "4e024a5dbb268e99838d24095f4323cd03b1265022109a3f264083a195ca7ef1"
+      },
+      {
+        "path": "src/main.cpp",
+        "git_blob_sha1": "98e21780fa83bf599abae4f160a13a5302e9c6e6",
+        "sha256": "3bdcc02dabe691193884eaac89255a7474cd284811c5ddca6d8a790f0263e91b"
+      },
+      {
+        "path": "src/CMakeLists.txt",
+        "git_blob_sha1": "4635d1c7c7786cf6fa270d23ff5dadc12bcdb556",
+        "sha256": "74b73fd878ab221026ea833ef632230a4c03b5ff118cf9ee2ad591e43ed2579f"
+      },
+      {
+        "path": "src/initialstartutil.cpp",
+        "git_blob_sha1": "0669caeec3bf1e773b77ad8b8ff984697dea71f3",
+        "sha256": "c83077bda5f39c16612a7e1cb77eb435be8d19d92673f5ebcd49e1e3f0065265"
+      },
+      {
+        "path": "src/auth/authhelper.cpp",
+        "git_blob_sha1": "652a8005217673204a08812de48c8296df4fc444",
+        "sha256": "b483b7a2145eed0f92e568afa75774cead906af1429a65fa6846bf295d2646db"
+      },
+      {
+        "path": "src/accountcontroller.cpp",
+        "git_blob_sha1": "270236967b78b027fbab8545fb2679ec6a01a371",
+        "sha256": "381c26464b1d1436d3cf060e4674eb1a43a1450cd65a45abc43bacfc1df6f2d4"
+      },
+      {
+        "path": "modules/CMakeLists.txt",
+        "git_blob_sha1": "40c0ee809d894b6d29a9ef48c025105f4b37a1e2",
+        "sha256": "e8fc8f7d68c240c789bb8cbe16ff7d78a4f3103cd2f7b06fd877520da3a49829"
+      },
+      {
+        "path": "modules/prepareutil/prepareutil.cpp",
+        "git_blob_sha1": "7c9d7682be52e49360aef27946e953b99dca843a",
+        "sha256": "3cfafe86681a2d57dad3303ea6be3886895fa61adbe62675ff90bb0bc07e4569"
+      },
+      {
+        "path": "modules/languageutil/languageutil.cpp",
+        "git_blob_sha1": "9d3f01eef5605614e14af15c4c2cdca4b89e0b73",
+        "sha256": "5853acc39a85e50e4a483348595c3918bd7cfe482ce357f350d17f729ae0d2a6"
+      },
+      {
+        "path": "modules/finished/contents/ui/main.qml",
+        "git_blob_sha1": "92c1d9fafc394a17fdc845f3d9c2aacf11562c50",
+        "sha256": "385b7a8229454b1b63a474e0cdb5c72525452956b49f2ba82a9a8a61239d0890"
+      }
+    ]
+  },
+  "fedora": {
+    "distgit": "https://src.fedoraproject.org/rpms/plasma-setup",
+    "browsing_ref": "f44",
+    "baseline_authority": "exact source RPM and recorded digests, not mutable distgit branch",
+    "patches": [
+      "plasma-setup-load-default-wallpaper.patch",
+      "plasma-setup-select-fedora-lookandfeel.patch"
+    ],
+    "patches_applied_for_analysis": true,
+    "binary_wallpaper_format": "jxl",
+    "installed_modules": [
+      {
+        "id": "org.kde.plasmasetup.language",
+        "weight": 0,
+        "main_qml_sha256": "7e4d696db568b6db2002cda234f2506927581880af98f3bdcf8e859b6cce985f",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.keyboard",
+        "weight": 5,
+        "main_qml_sha256": "fc15d84fd9ff24a1cb8c63ebbd0110b63968d5807e2c7188d84efbea875ac969",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.prepare",
+        "weight": 10,
+        "main_qml_sha256": "5695aa19c08a4a950a5858bc15baf8de9e5ef06b5e48adab9ce19553d21ced6e",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.account",
+        "weight": 20,
+        "main_qml_sha256": "2b69fe44f13310f34d6ac439f5a7822a23af3114d16ad03f47f1bb8cf6f92ec3",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.hostname",
+        "weight": 30,
+        "main_qml_sha256": "c61a279578f8cce76f69717599624030dc930093dd81e1a7396dee59f2e27b56",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.time",
+        "weight": 40,
+        "main_qml_sha256": "8f66b87c06b5ae659ac1682ac6b56a1e3c881d2ce0d5a9d313a18722fc07dab4",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.wifi",
+        "weight": 50,
+        "main_qml_sha256": "d470eca7d81a381f6450ce1b320ea0fcd104986fae4b4befe7b7a744aab50f4d",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.finished",
+        "weight": 200,
+        "main_qml_sha256": "385b7a8229454b1b63a474e0cdb5c72525452956b49f2ba82a9a8a61239d0890",
+        "matches_patched_source": true
+      }
+    ],
+    "binary_identifier_checks": [
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "wallpapers/Default/contents/images/",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "wallpapers/Default/contents/images_dark/",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "5120x2880.jxl",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "1440x2960.jxl",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "BreezeDark",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "org.fedoraproject.fedora.desktop",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "org.fedoraproject.fedoradark.desktop",
+        "present": true
+      }
+    ],
+    "installer_seed_matches": []
+  },
+  "ro_theme": {
+    "repository": "https://github.com/Project-Ro-ASD/Ro-Theme",
+    "commit": "ccfba78000cadaedf82baa78b536964d16110b41",
+    "version_file": "1.0.1",
+    "rpm_spec_version": "1.0.1",
+    "rpm_spec_release": "2%{?dist}",
+    "snapshots_match_git_blobs": true,
+    "files": [
+      {
+        "path": "README.md",
+        "git_blob_sha1": "534ff48979ac445de421dd4d7a25f25fba3249a7",
+        "sha256": "c8eb843751a17b7fd2f86c907ffe0ea49ac824c1f57b9566ffe21ad2d7ab77d4"
+      },
+      {
+        "path": "VERSION",
+        "git_blob_sha1": "7dea76edb3dc51b6e5e8223e9f941a35c1e364d6",
+        "sha256": "44e161e4495cac2cf7858043e9e6418e9579f0ddcfae826f9a372622968ce066"
+      },
+      {
+        "path": "core/tokens/colors.dark.json",
+        "git_blob_sha1": "0fda3adb68f058fedeaa2643e7875b9ed665730d",
+        "sha256": "852d9b5415d3935e4208ab84d82effb9c94b526c997ad9c92d8a358ddc4964b1"
+      },
+      {
+        "path": "core/tokens/colors.light.json",
+        "git_blob_sha1": "675375bca71a377c513e5b769c879389272e8e40",
+        "sha256": "1da35260338a72a0451914bf86968473dbf17c4a0c660f1f16ad9d2088428d1f"
+      },
+      {
+        "path": "core/tokens/motion.json",
+        "git_blob_sha1": "cf8df964e25c27ce1bf088c527bdd4685ec7e54f",
+        "sha256": "5f89b1a2cb137727dc2010c9b7c454c602752bb034f98c72ac77909cb210746f"
+      },
+      {
+        "path": "core/tokens/opacity.json",
+        "git_blob_sha1": "501539a13509f19ff410430a3539c7f762a88e9a",
+        "sha256": "f620d9485c3c547288ede2d673683c10a76bcc0b26a2b38dd3e51bb5e5ae6fc5"
+      },
+      {
+        "path": "core/tokens/radius.json",
+        "git_blob_sha1": "8dbb8b479c58fd685fb56f6aaa805c347323525e",
+        "sha256": "a0aa9226c77dbbdcd64d01026a4e285c293ab3d1e85ea228fe678cbbc6c97e58"
+      },
+      {
+        "path": "core/tokens/spacing.json",
+        "git_blob_sha1": "ca68901b1441fcde334fa3ed7730fad9805d745f",
+        "sha256": "c67efe8e162a392d79793c70a8edd37293ea71eaaf82f1e5ff9359b39996b775"
+      },
+      {
+        "path": "dist/qml/RoTokens.qml",
+        "git_blob_sha1": "4028e9a590ae2525421ac923c999f52c71f1ef13",
+        "sha256": "e2a1b165f3bf9605c8bdfba86f32d723239c205d1e533fbf1057c48e51e9ba33"
+      },
+      {
+        "path": "docs/developer-theme-tokens.md",
+        "git_blob_sha1": "f885d4a4653cf45096197e80aadee24e16c73a54",
+        "sha256": "8b936002442ed51473ae6f6be303cba7bacebc0f7f43f49dc06c4d12bfacda40"
+      },
+      {
+        "path": "packaging/ro-theme.spec",
+        "git_blob_sha1": "d1023229ec61aaace4eb7403a8433af4f6a5d19f",
+        "sha256": "5c932af7536a9b90c7647d8f45ab77ec2af207455f12a8ac1f3bce8803603f69"
+      },
+      {
+        "path": "platform/plasma/defaults/xdg/kdeglobals",
+        "git_blob_sha1": "4f8f72912714dd1a7538d82a696a05c1349d046e",
+        "sha256": "45df988d94174f575b72a4d6a7f51bee821aa780521d0be9d17112784e55ee50"
+      },
+      {
+        "path": "platform/plasma/look-and-feel/org.ro.dark/contents/defaults",
+        "git_blob_sha1": "2d9482c7303895d44293d566aadfe0a9b56fc8ed",
+        "sha256": "f79b5361ada10b23b178e1bb907147ec39a7bec4c34f481a4959c6a3d50f69ec"
+      },
+      {
+        "path": "platform/plasma/look-and-feel/org.ro.light/contents/defaults",
+        "git_blob_sha1": "a6bb77135fbaa28a3e0efd1e0a08bfe6a30a1302",
+        "sha256": "00edb40f2103cc6392a85590a1b28ed291b0360595d5de82fc190ebb4f35db4a"
+      },
+      {
+        "path": "scripts/apply-dark-defaults.sh",
+        "git_blob_sha1": "34cb6928d8fbc9be0934a51f374197d702eb4944",
+        "sha256": "1a979ef24b8b35dfb34acd806e63d18bb55a7867c7570248b2f2b548b543befa"
+      }
+    ],
+    "asset_inventory": [
+      {
+        "path": "assets/brand/roasd-logo.png",
+        "git_blob_sha1": "d7708930e41d0e278afcbf17fdb07b928d87b5ec"
+      },
+      {
+        "path": "platform/plymouth/ro-theme/roasd-logo.png",
+        "git_blob_sha1": "d7708930e41d0e278afcbf17fdb07b928d87b5ec"
+      },
+      {
+        "path": "assets/wallpapers/light.jpg",
+        "git_blob_sha1": "6f462b872e346c87d5510e916ec7d3e85f70d510"
+      },
+      {
+        "path": "assets/wallpapers/dark.jpg",
+        "git_blob_sha1": "659550e66c9a1b3697c40973116d29c9ad5aabb1"
+      },
+      {
+        "path": "assets/wallpapers/loginv2.jpg",
+        "git_blob_sha1": "58086cd138a3d08b824ea99d144583059260c106"
+      }
+    ]
+  },
+  "local_read_only_context": [
+    {
+      "repository": "ro-Installer",
+      "commit": "59aee77217b5b84eaf5a3dac91d674a371548405",
+      "clean_at_verification": true,
+      "files": [
+        {
+          "path": "lib/models/installer_handoff.dart",
+          "sha256": "1334421138ba9320a5d6595d488e17de85b7ed1030d7ea338881896d0a350b8d",
+          "git_blob_sha1": "bf5bb600dcbcec8337562be258e4e01947a138a0"
+        },
+        {
+          "path": "test/models/installer_handoff_test.dart",
+          "sha256": "a49ff13ccfea918b3d1d8970752b716c850e54010dca345a765a447e74d30157",
+          "git_blob_sha1": "2ca5103df84cf4e6bfffbb21a6fc2675152b5281"
+        },
+        {
+          "path": "lib/services/install_stages/target_finalization_stage.dart",
+          "sha256": "486eff11e0151699dbd7faf9432663929081f1faa5efe814bbee6e5efdea99f1",
+          "git_blob_sha1": "0e14bd2ee6546f2f684f8bebd23f77c6e86c61ff"
+        }
+      ]
+    },
+    {
+      "repository": "Ro-ASD-release",
+      "commit": "2f751e387c5d199be2f58b97a65d6e4f54e4bff4",
+      "clean_at_verification": true,
+      "files": [
+        {
+          "path": "docs/BRANDING-CONTRACT-V1.md",
+          "sha256": "c8b253458375420ce6b0f04dcd652542ff3ae3704535734b702fa61f12872ac1",
+          "git_blob_sha1": "cd55643b5ffcd624b47c24751e0407a55baaedb2"
+        },
+        {
+          "path": "docs/DEFAULTS-OWNERSHIP-V1.md",
+          "sha256": "a83e900e07893f5f748799f5d1d434b18f1363c0658f5bb901a6d038a32de581",
+          "git_blob_sha1": "460e00829310ba0a9736f467ada2f7a762e850f3"
+        },
+        {
+          "path": "docs/DESKTOP-STANDARD-PROFILE-V1.md",
+          "sha256": "1a0f3681774288c5c2012aa2d9ebbaccd6505cdf7a3002f25033bd4819f44f27",
+          "git_blob_sha1": "a02ca0437dc4c91c0dc78b8c4a7acb5818107f0a"
+        }
+      ]
+    },
+    {
+      "repository": "Ro-image-compose",
+      "commit": "38ec42653bf71e8caa40ad180385e0315f84ed32",
+      "clean_at_verification": true,
+      "files": [
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha256": "8a0856ac447deb87e85ec04d390afb5a1bde3634bdbd073297854f63f746e496",
+          "git_blob_sha1": "d77534a1fcac695f8eb234620ac433c78369a6c7"
+        },
+        {
+          "path": "docs/IMAGE-LIFECYCLE.md",
+          "sha256": "5cd3e629fbaf670a7860eddf1113cd7886394445776d381b980b1f28c73e05a5",
+          "git_blob_sha1": "638fef526e1f0b5f3bd0a07c76fd1313a2a28cbd"
+        }
+      ]
+    }
+  ],
+  "verification_limits": {
+    "rpm_signature_trust_verified": false,
+    "detached_archive_signature_verified": false,
+    "wizard_implemented": false,
+    "upstream_application_executed": false,
+    "rpm_installed": false,
+    "vm_firstboot_tested": false,
+    "iso_built": false,
+    "runtime_certified": false,
+    "other_repositories_modified": false,
+    "release_or_rpm_published": false
+  }
+}
