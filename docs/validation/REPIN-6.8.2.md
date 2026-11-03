@@ -125,4 +125,4 @@ were not re-inspected for this repin and are not part of the 6.8.2 baseline.
 and `python3 tools/harness.py installed` pass on this host (Fedora 44 with the
 exact installed RPM). `python3 tools/harness.py prepare --cache <dir>` downloads
 and verifies the Koji artifacts, SRPM payload, patches and critical sources.
-The container load test (`tools/run-container.sh build` then `test`) had not completed when this report was committed, so load verification is **unverified** for 6.8.2.
+The container load test (`tools/run-container.sh build` then `test`) **passed** on 2026-11-03: the development package loads against the rebuilt 6.8.2 `org.kde.plasmasetup.components` with the packaged discovery plugin. Environment: `qt6-qtbase-6.11.2-3.fc44.x86_64`, `qt6-qtdeclarative-6.11.2-2.fc44.x86_64`, `kf6-kpackage-6.31.0-1.fc44.x86_64`, `extra-cmake-modules-6.31.0-1.fc44.noarch`. Graphical and firstboot remain unverified.

@@ -61,8 +61,15 @@
     "prepare": "passed"
   },
   "load": {
-    "status": "unverified",
-    "reason": "container build not completed when this record was committed"
+    "status": "passed",
+    "date": "2026-11-03",
+    "command": "tools/run-container.sh test",
+    "environment": [
+      "qt6-qtbase-6.11.2-3.fc44.x86_64",
+      "qt6-qtdeclarative-6.11.2-2.fc44.x86_64",
+      "kf6-kpackage-6.31.0-1.fc44.x86_64",
+      "extra-cmake-modules-6.31.0-1.fc44.noarch"
+    ]
   },
   "graphical": {
     "status": "unverified"
