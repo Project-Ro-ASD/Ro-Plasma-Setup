@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 task_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
-task_image=localhost/ro-plasma-setup-harness:6.7.5-1.fc44
+task_image=localhost/ro-plasma-setup-harness:6.8.2-1.fc44
 if [[ ${1:-} == build ]]; then
     exec podman build --file "$task_root/containers/Containerfile" --tag "$task_image" "$task_root"
 fi

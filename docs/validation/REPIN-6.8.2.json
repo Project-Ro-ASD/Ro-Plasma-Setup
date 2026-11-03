@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "nevra": "plasma-setup-6.8.2-1.fc44.x86_64",
+  "supersedes": "plasma-setup-6.7.5-1.fc44.x86_64",
+  "upstream_commit": "1f7fee06103f2b0207a851da9b258c7c241bbb1e",
+  "pages": [
+    {
+      "id": "org.kde.plasmasetup.language",
+      "weight": 0
+    },
+    {
+      "id": "org.kde.plasmasetup.keyboard",
+      "weight": 5
+    },
+    {
+      "id": "org.kde.plasmasetup.prepare",
+      "weight": 10
+    },
+    {
+      "id": "org.kde.plasmasetup.account",
+      "weight": 20
+    },
+    {
+      "id": "org.kde.plasmasetup.hostname",
+      "weight": 30
+    },
+    {
+      "id": "org.kde.plasmasetup.time",
+      "weight": 40
+    },
+    {
+      "id": "org.kde.plasmasetup.wifi",
+      "weight": 50
+    },
+    {
+      "id": "org.kde.plasmasetup.finished",
+      "weight": 200
+    }
+  ],
+  "changed": [
+    "Wizard.qml: onPageActivated also on Back and on leaving landing",
+    "SetupModule: new nextRequested() signal",
+    "language/account/hostname main.qml",
+    "build minimums Qt 6.11, KF 6.30",
+    "pins: SRPM, RPM, archive, sig, spec, Wizard.qml, setupmodule.h, language/account/hostname main.qml"
+  ],
+  "unchanged": [
+    "page IDs and weights",
+    "positional finality",
+    "PagesModel reload and no tie-breaker",
+    "finish()/doUserCreationSteps() false-completion path",
+    "BreezeDark detection prepareutil.cpp:39",
+    "Fedora patches (same digests)",
+    "static components module"
+  ],
+  "static": {
+    "unit_tests": "passed",
+    "contracts": "passed",
+    "installed": "passed",
+    "prepare": "passed"
+  },
+  "load": {
+    "status": "unverified",
+    "reason": "container build not completed when this record was committed"
+  },
+  "graphical": {
+    "status": "unverified"
+  },
+  "firstboot": {
+    "status": "unverified"
+  }
+}

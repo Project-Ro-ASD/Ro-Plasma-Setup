@@ -6,6 +6,11 @@ Status: proposed decision; source and RPM inspection completed
 
 Target: Fedora 44, KDE Plasma 6.7.x; inspected package: `6.7.5-1.fc44`
 
+> 2026-11-03: the executable baseline was repinned to `6.8.2-1.fc44`; see the
+> [repin validation report](validation/REPIN-6.8.2.md). This document is kept as
+> the original 6.7.5 decision record. Its version-specific statements and source
+> positions were re-checked against 6.8.2 in that report.
+
 ## 1. Decision
 
 Recommend **B: a separate Ro-ASD customization package with minimal upstream
