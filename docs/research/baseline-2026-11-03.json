@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "purpose": "Repin of the PR-01 static evidence to plasma-setup-6.8.2-1.fc44; not runtime compatibility certification",
+  "supersedes": "docs/research/baseline-2026-10-09.json",
+  "inspected_date": "2026-11-03",
+  "timezone": "Europe/Istanbul",
+  "target": {
+    "distribution": "Fedora",
+    "release": 44,
+    "plasma_series": "6.8.x",
+    "package": "plasma-setup",
+    "version": "6.8.2",
+    "release_string": "1.fc44",
+    "binary_arch": "x86_64"
+  },
+  "artifacts": [
+    {
+      "kind": "source",
+      "filename": "plasma-setup-6.8.2-1.fc44.src.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.8.2/1.fc44/src/plasma-setup-6.8.2-1.fc44.src.rpm",
+      "sha256": "0d60a9f44b3128dfebb315f3358cca2eca0d920f652252c16f3e9cd32bd9af3b"
+    },
+    {
+      "kind": "binary",
+      "filename": "plasma-setup-6.8.2-1.fc44.x86_64.rpm",
+      "url": "https://kojipkgs.fedoraproject.org/packages/plasma-setup/6.8.2/1.fc44/x86_64/plasma-setup-6.8.2-1.fc44.x86_64.rpm",
+      "sha256": "7bbfbb837f61a762f5779a4e566206b16ee9fe7f3402ddff028b319cc5a20fdb"
+    }
+  ],
+  "srpm_contents": [
+    {
+      "path": "plasma-setup-6.8.2.tar.xz",
+      "sha256": "d10c2d766e2b1a3afaa70c2995f0abc8eb9ff2da19c9a4e794ae9e89859758d7"
+    },
+    {
+      "path": "plasma-setup-6.8.2.tar.xz.sig",
+      "sha256": "dcf6d905f795c97827d0d45605466d9e0b134e53d017124eb24527016a716fb5"
+    },
+    {
+      "path": "plasma-setup-load-default-wallpaper.patch",
+      "sha256": "d8062c5f94a140c51fc381e7cf8a955ab5c9203d688de9c96e2d7dfbf20d83ad"
+    },
+    {
+      "path": "plasma-setup-select-fedora-lookandfeel.patch",
+      "sha256": "62a13a7b44f695b62e8334a67eb7aaf160b57d042c40a75730286aee67c74ab0"
+    },
+    {
+      "path": "plasma-setup.spec",
+      "sha256": "ab2f4750045321a39e557b2160d4ead7d9110729a1e56b2929a67aa4332eb177"
+    }
+  ],
+  "upstream": {
+    "repository": "https://invent.kde.org/plasma/plasma-setup",
+    "mirror": "https://github.com/KDE/plasma-setup",
+    "ref": "v6.8.2",
+    "commit": "1f7fee06103f2b0207a851da9b258c7c241bbb1e",
+    "critical_files_match_release_archive": true,
+    "files": [
+      {
+        "path": "docs/CUSTOM_MODULES.md",
+        "git_blob_sha1": "1d3dd1461986438719e47e5223e0a594f95db205",
+        "sha256": "400ac72e9225968b9342596ac00ff876aa4e15c51368c05ad5a054490583ff0e"
+      },
+      {
+        "path": "files/plasmasetuprc",
+        "git_blob_sha1": "796ca3a558244b139eaa8e13a46040cb7cec88a6",
+        "sha256": "49c389930c0f802252738b5080fd00d7bdefb01e509195af710b079d360e84ac"
+      },
+      {
+        "path": "files/plasma-setup.service.in",
+        "git_blob_sha1": "46ee819ff2e86ef3b7e217c9a1306b109323c2de",
+        "sha256": "eca1b52e73437131e22f49926f555672f30b91beaf72aa7848f07ab96a5916e3"
+      },
+      {
+        "path": "files/plasma-setup-tmpfiles.conf.in",
+        "git_blob_sha1": "8ea1989a7193969d791dad6397d1bf354bca017d",
+        "sha256": "46d076446fe7490f987e73c3cbdefd5617aeb4ffa28517925e00f94eec52275b"
+      },
+      {
+        "path": "src/pagesmodel.cpp",
+        "git_blob_sha1": "59e8ed3e2a3a6e3f30ac7c9ca97b28f5045b9c7b",
+        "sha256": "58063a0e0410234463f726db9fa1a31cf7fb85159b68d07ae3ede2b35ae8eaa7"
+      },
+      {
+        "path": "src/components/setupmodule.h",
+        "git_blob_sha1": "6ec21c6de4bf9f491592e7369a17c6626ae53d52",
+        "sha256": "a09276eff0d3571d091d829d048621672410e78e9f3cfbbf77eff39bc99821cb"
+      },
+      {
+        "path": "src/packagestructure/plasmasetuppackage.cpp",
+        "git_blob_sha1": "65ea3d27c5f78cc31c36303bfb52f0e6725d81b1",
+        "sha256": "eb10f6b8e7a5dd00a50300440474b559d3d9055d727e91f8c2ca173c95ecc3b9"
+      },
+      {
+        "path": "src/qml/Wizard.qml",
+        "git_blob_sha1": "fa3b5ac9267bfc889db8dc232fca256aaa2c6f2c",
+        "sha256": "8fbf858cfe397e213ba268dae3f04be29217ede140b0fa92cee597825a257d6a"
+      },
+      {
+        "path": "src/qml/LandingComponent.qml",
+        "git_blob_sha1": "24d8c897757a3f34258df5af3330a6eefaa8de1d",
+        "sha256": "3ba225ee78679f6f4ad9392c2f350eede3db15bbce0dfb60c3a3eb790e8bc93e"
+      },
+      {
+        "path": "src/main.cpp",
+        "git_blob_sha1": "98e21780fa83bf599abae4f160a13a5302e9c6e6",
+        "sha256": "3bdcc02dabe691193884eaac89255a7474cd284811c5ddca6d8a790f0263e91b"
+      },
+      {
+        "path": "src/CMakeLists.txt",
+        "git_blob_sha1": "4635d1c7c7786cf6fa270d23ff5dadc12bcdb556",
+        "sha256": "74b73fd878ab221026ea833ef632230a4c03b5ff118cf9ee2ad591e43ed2579f"
+      },
+      {
+        "path": "src/initialstartutil.cpp",
+        "git_blob_sha1": "0669caeec3bf1e773b77ad8b8ff984697dea71f3",
+        "sha256": "c83077bda5f39c16612a7e1cb77eb435be8d19d92673f5ebcd49e1e3f0065265"
+      },
+      {
+        "path": "src/auth/authhelper.cpp",
+        "git_blob_sha1": "652a8005217673204a08812de48c8296df4fc444",
+        "sha256": "b483b7a2145eed0f92e568afa75774cead906af1429a65fa6846bf295d2646db"
+      },
+      {
+        "path": "src/accountcontroller.cpp",
+        "git_blob_sha1": "4e4695d68e430f6029c795af9ef57e029800d490",
+        "sha256": "bccab23d6c0e3aca821637640035c5b81c6b5d5cecb7e9d24bc06ef2f7031ab4"
+      },
+      {
+        "path": "modules/CMakeLists.txt",
+        "git_blob_sha1": "40c0ee809d894b6d29a9ef48c025105f4b37a1e2",
+        "sha256": "e8fc8f7d68c240c789bb8cbe16ff7d78a4f3103cd2f7b06fd877520da3a49829"
+      },
+      {
+        "path": "modules/prepareutil/prepareutil.cpp",
+        "git_blob_sha1": "7c9d7682be52e49360aef27946e953b99dca843a",
+        "sha256": "3cfafe86681a2d57dad3303ea6be3886895fa61adbe62675ff90bb0bc07e4569"
+      },
+      {
+        "path": "modules/languageutil/languageutil.cpp",
+        "git_blob_sha1": "8669c0ef20966fa06843969e9e7fe1e59e0cde12",
+        "sha256": "e9aa9f75cbd3e8b632d6929c09c1d997a6635c201ace8d679d068659a820ffc3"
+      },
+      {
+        "path": "modules/finished/contents/ui/main.qml",
+        "git_blob_sha1": "92c1d9fafc394a17fdc845f3d9c2aacf11562c50",
+        "sha256": "385b7a8229454b1b63a474e0cdb5c72525452956b49f2ba82a9a8a61239d0890"
+      }
+    ]
+  },
+  "fedora": {
+    "distgit": "https://src.fedoraproject.org/rpms/plasma-setup",
+    "browsing_ref": "f44",
+    "baseline_authority": "exact source RPM and recorded digests, not mutable distgit branch",
+    "patches": [
+      "plasma-setup-load-default-wallpaper.patch",
+      "plasma-setup-select-fedora-lookandfeel.patch"
+    ],
+    "patches_applied_for_analysis": true,
+    "binary_wallpaper_format": "jxl",
+    "patches_apply_cleanly": true,
+    "installed_modules": [
+      {
+        "id": "org.kde.plasmasetup.language",
+        "weight": 0,
+        "main_qml_sha256": "d3fcc6e11ed699bdb7ecef091731ac34fa9702874012574b4e1229d61333d516",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.keyboard",
+        "weight": 5,
+        "main_qml_sha256": "fc15d84fd9ff24a1cb8c63ebbd0110b63968d5807e2c7188d84efbea875ac969",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.prepare",
+        "weight": 10,
+        "main_qml_sha256": "5695aa19c08a4a950a5858bc15baf8de9e5ef06b5e48adab9ce19553d21ced6e",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.account",
+        "weight": 20,
+        "main_qml_sha256": "4e82689c4abb0b961b31b4285bfe6850f2d899d070a60b9842d9a0d1d7c1e00c",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.hostname",
+        "weight": 30,
+        "main_qml_sha256": "7e256dac859c0f79f0ada9b45d6f919e9f778d0b134942d3e1335036baf9ff5b",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.time",
+        "weight": 40,
+        "main_qml_sha256": "8f66b87c06b5ae659ac1682ac6b56a1e3c881d2ce0d5a9d313a18722fc07dab4",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.wifi",
+        "weight": 50,
+        "main_qml_sha256": "d470eca7d81a381f6450ce1b320ea0fcd104986fae4b4befe7b7a744aab50f4d",
+        "matches_patched_source": true
+      },
+      {
+        "id": "org.kde.plasmasetup.finished",
+        "weight": 200,
+        "main_qml_sha256": "385b7a8229454b1b63a474e0cdb5c72525452956b49f2ba82a9a8a61239d0890",
+        "matches_patched_source": true
+      }
+    ],
+    "binary_identifier_checks": [
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "wallpapers/Default/contents/images/",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "wallpapers/Default/contents/images_dark/",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "5120x2880.jxl",
+        "present": true
+      },
+      {
+        "path": "usr/libexec/plasma-setup",
+        "identifier": "1440x2960.jxl",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "BreezeDark",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "org.fedoraproject.fedora.desktop",
+        "present": true
+      },
+      {
+        "path": "usr/lib64/qt6/qml/org/kde/plasmasetup/prepareutil/libplasmasetup_prepareutil.so",
+        "identifier": "org.fedoraproject.fedoradark.desktop",
+        "present": true
+      }
+    ],
+    "installer_seed_matches": []
+  },
+  "not_reinspected": [
+    "ro_theme",
+    "local_read_only_context"
+  ],
+  "verification_limits": {
+    "rpm_signature_trust_verified": false,
+    "detached_archive_signature_verified": false,
+    "wizard_implemented": false,
+    "upstream_application_executed": false,
+    "rpm_installed": true,
+    "vm_firstboot_tested": false,
+    "iso_built": false,
+    "runtime_certified": false,
+    "other_repositories_modified": false,
+    "release_or_rpm_published": false
+  }
+}

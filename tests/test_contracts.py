@@ -19,6 +19,18 @@ class ContractTests(unittest.TestCase):
     def test_lock_matches_immutable_pr01_baseline(self):
         harness.verify_baseline()
 
+    def test_historical_baseline_is_preserved_and_lock_version_is_consistent(self):
+        provenance = harness.LOCK["provenance"]
+        historical = harness.ROOT / provenance["supersedes_baseline_path"]
+        self.assertEqual(harness.sha(historical), provenance["supersedes_baseline_sha256"])
+        baseline = json.loads((harness.ROOT / provenance["baseline_path"]).read_text())
+        self.assertEqual(baseline["supersedes"], provenance["supersedes_baseline_path"])
+        target = baseline["target"]
+        self.assertEqual(harness.LOCK["nevra"],
+                         f"{target['package']}-{target['version']}-{target['release_string']}.{target['binary_arch']}")
+        self.assertEqual(harness.VERSION, target["version"])
+        self.assertEqual(baseline["upstream"]["ref"], f"v{harness.VERSION}")
+
     def test_both_future_slots_preserve_first_and_last(self):
         ordered = harness.contracts()
         self.assertEqual(ordered[0]["id"], harness.LANGUAGE)

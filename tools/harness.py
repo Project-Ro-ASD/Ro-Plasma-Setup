@@ -14,6 +14,8 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCK = json.loads((ROOT / "tests/baseline.json").read_text())
+# Upstream version comes only from the pinned NEVRA, e.g. plasma-setup-6.8.2-1.fc44.x86_64.
+VERSION = LOCK["nevra"].split("-")[2]
 SAMPLE = ROOT / "tests/development-package"
 SAMPLE_ID = "org.ro.plasmasetup.development"
 LANGUAGE = "org.kde.plasmasetup.language"
@@ -112,9 +114,9 @@ def prepare(cache):
     source = cache / "source"
     if not source.exists():
         source.mkdir()
-        with tarfile.open(srpm / "plasma-setup-6.7.5.tar.xz") as archive:
+        with tarfile.open(srpm / f"plasma-setup-{VERSION}.tar.xz") as archive:
             archive.extractall(source, filter="data")
-    tree = source / "plasma-setup-6.7.5"
+    tree = source / f"plasma-setup-{VERSION}"
     for patch in srpm.glob("*.patch"):
         require("src/components/" not in patch.read_text(), f"Fedora now patches SetupModule: review {patch.name}")
     verify_source(tree)
@@ -180,7 +182,7 @@ def run(runner, cache, graphical=False):
         require(not Path("/run/.containerenv").exists() and os.environ.get("RO_HARNESS_DISPOSABLE_VM") == "1",
                 "graphical evidence requires a disposable VM desktop")
         require(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"), "no graphical display; rendering unverified")
-    verify_source(cache / "source/plasma-setup-6.7.5")
+    verify_source(cache / f"source/plasma-setup-{VERSION}")
     report = {"schema_version": 1, "static": {"status": "passed", "order_fixture": contracts(), **installed()},
               "load": {"status": "unverified"}, "graphical": {"status": "unverified", "reason": "disposable VM graphical test not run"},
               "firstboot": {"status": "unverified", "reason": "PR-02 never executes upstream wizard or lifecycle"}}

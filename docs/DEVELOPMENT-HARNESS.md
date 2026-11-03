@@ -1,9 +1,13 @@
 # KPackage development harness (PR-02)
 
 This is development tooling for Fedora 44 x86_64 and exactly
-`plasma-setup-6.7.5-1.fc44.x86_64`. Never include the sample or runner in a Ro
-image. The [PR-01 architecture](ARCHITECTURE-PR-01.md) and its
-[research baseline](research/baseline-2026-10-09.json) remain authoritative.
+`plasma-setup-6.8.2-1.fc44.x86_64`. Never include the sample or runner in a Ro
+image. The [PR-01 architecture](ARCHITECTURE-PR-01.md) remains authoritative; its
+research baseline was repinned from 6.7.5 to 6.8.2 as recorded in the
+[repin report](validation/REPIN-6.8.2.md) and the
+[current research baseline](research/baseline-2026-11-03.json). The original
+[6.7.5 baseline](research/baseline-2026-10-09.json) is kept unchanged as the
+historical record, and its digest is checked by the test suite.
 `tests/baseline.json` contains the executable subset, provenance digest and
 additional component and loader/metadata digests from the same verified artifacts. Baseline
 drift fails closed and requires a reviewed repin, including affected tests.
@@ -122,13 +126,13 @@ To rebuild after changing tooling or the sample, run `build` again. Remove only
 the local development image when finished:
 
 ```sh
-podman image rm localhost/ro-plasma-setup-harness:6.7.5-1.fc44
+podman image rm localhost/ro-plasma-setup-harness:6.8.2-1.fc44
 ```
 
 ## Disposable VM: graphical sample test
 
 Use a disposable Fedora 44 x86_64 desktop VM snapshot with an ordinary test user,
-the exact Plasma Setup RPM, Qt 6.10+, KF/ECM 6.26+, a working Wayland/X11 display,
+the exact Plasma Setup RPM, Qt 6.11+, KF/ECM 6.30+, a working Wayland/X11 display,
 and the dependencies listed in `containers/Containerfile`. Do not use the
 `plasma-setup` system user. Do not enable/restart login-manager/setup services,
 alter accounts or manipulate OOBE markers. PR-02's native runner is separate
@@ -140,7 +144,7 @@ the operator that the machine is disposable; it is not automatic VM detection.
 ```sh
 python3 tools/harness.py prepare --cache .cache/fedora-baseline
 cmake -S tests/runtime -B build/probe -G Ninja \
-  -DPLASMA_SETUP_SOURCE="$PWD/.cache/fedora-baseline/source/plasma-setup-6.7.5"
+  -DPLASMA_SETUP_SOURCE="$PWD/.cache/fedora-baseline/source/plasma-setup-6.8.2"
 cmake --build build/probe --parallel 2
 mkdir -p test-output/vm
 RO_HARNESS_DISPOSABLE_VM=1 RO_HARNESS_EVIDENCE_DIR="$PWD/test-output/vm" \
@@ -161,9 +165,9 @@ If this VM step cannot run, retain `graphical.status = unverified`. Static and
 offscreen load success cannot promote that status. Even a successful standalone
 VM test leaves actual upstream shell and firstboot lifecycle **unverified**.
 
-[components]: https://github.com/KDE/plasma-setup/blob/6089b09b2c4f9b95f58da5c7f2a2d65faf9ba7bd/src/components/CMakeLists.txt
-[loader]: https://github.com/KDE/plasma-setup/blob/6089b09b2c4f9b95f58da5c7f2a2d65faf9ba7bd/src/pagesmodel.cpp
-[structure]: https://github.com/KDE/plasma-setup/blob/6089b09b2c4f9b95f58da5c7f2a2d65faf9ba7bd/src/packagestructure/plasmasetuppackage.cpp
-[guide]: https://github.com/KDE/plasma-setup/blob/6089b09b2c4f9b95f58da5c7f2a2d65faf9ba7bd/docs/CUSTOM_MODULES.md
+[components]: https://github.com/KDE/plasma-setup/blob/1f7fee06103f2b0207a851da9b258c7c241bbb1e/src/components/CMakeLists.txt
+[loader]: https://github.com/KDE/plasma-setup/blob/1f7fee06103f2b0207a851da9b258c7c241bbb1e/src/pagesmodel.cpp
+[structure]: https://github.com/KDE/plasma-setup/blob/1f7fee06103f2b0207a851da9b258c7c241bbb1e/src/packagestructure/plasmasetuppackage.cpp
+[guide]: https://github.com/KDE/plasma-setup/blob/1f7fee06103f2b0207a851da9b258c7c241bbb1e/docs/CUSTOM_MODULES.md
 [qt-plugins]: https://doc.qt.io/qt-6/qtqml-modules-cppplugins.html
 [kpackage]: https://api.kde.org/kpackage-packageloader.html

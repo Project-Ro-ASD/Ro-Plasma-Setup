@@ -116,7 +116,9 @@ int main(int argc, char **argv)
             QSignalSpy available(module.get(), SIGNAL(availableChanged()));
             QSignalSpy next(module.get(), SIGNAL(nextEnabledChanged()));
             QSignalSpy item(module.get(), SIGNAL(contentItemChanged()));
-            require(available.isValid() && next.isValid() && item.isValid(), QStringLiteral("missing public notify signals"));
+            // nextRequested() exists since 6.8.x; the 6.8.2 baseline requires it as part of the public interface.
+            QSignalSpy requested(module.get(), SIGNAL(nextRequested()));
+            require(available.isValid() && next.isValid() && item.isValid() && requested.isValid(), QStringLiteral("missing public notify signals"));
             require(module->setProperty("available", false) && !module->property("available").toBool(), QStringLiteral("available false failed"));
             module->setProperty("available", true);
             module->setProperty("available", true);
@@ -125,6 +127,7 @@ int main(int argc, char **argv)
             require(module->property("nextEnabled").toBool(), QStringLiteral("nextEnabled did not follow confirmation"));
             checkBox->setProperty("checked", false);
             require(!module->property("nextEnabled").toBool() && next.count() == 2, QStringLiteral("nextEnabled reset/notify failed"));
+            require(module->metaObject()->indexOfSignal("nextRequested()") >= 0 && requested.count() == 0, QStringLiteral("nextRequested signal contract failed"));
             QQuickItem replacement;
             require(module->setProperty("contentItem", QVariant::fromValue(&replacement)), QStringLiteral("contentItem write failed"));
             require(module->property("contentItem").value<QQuickItem *>() == &replacement, QStringLiteral("contentItem getter failed"));

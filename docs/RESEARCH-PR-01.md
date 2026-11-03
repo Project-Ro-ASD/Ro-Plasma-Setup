@@ -5,6 +5,12 @@ findings for the [architecture proposal](ARCHITECTURE-PR-01.md), not runtime
 certification. Machine-readable identifiers, hashes and checked files are in
 [the baseline](research/baseline-2026-10-09.json).
 
+> 2026-11-03: the current baseline is
+> [`6.8.2-1.fc44`](research/baseline-2026-11-03.json). This file remains the
+> 6.7.5 record; the [repin report](validation/REPIN-6.8.2.md) lists which
+> findings changed (source positions in `Wizard.qml` and `accountcontroller.cpp`
+> moved; page activation and a module `nextRequested` signal were added).
+
 ## Sources and method
 
 The [Fedora package index](https://packages.fedoraproject.org/pkgs/plasma-setup/plasma-setup/fedora-44-updates.html)
